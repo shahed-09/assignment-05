@@ -45,7 +45,9 @@
           </div>
           <div class="flex items-center space-x-2">
             <img src="./assets/coin.png" alt="" />
-            <p class="text-gray-600 font-semibold text-xl">5500 BDT</p>
+            <p class="text-gray-600 font-semibold text-xl">
+              <span id="accBalance">54645656</span> BDT
+            </p>
           </div>
         </nav>
         <!-- donation and history btn starts -->
@@ -79,7 +81,11 @@
         <div class="space-y-10">
           <div>
             <button class="bg-gray-100 rounded-xl text-base space-x-1 p-3">
-              <img class="inline" src="./assets/coin.png" alt="" /> 600 BDT
+              <img class="inline" src="./assets/coin.png" alt="" /><span
+                id="noakhali-acc"
+                >200100</span
+              >
+              BDT
             </button>
           </div>
           <h1 class="text-xl text-black font-bold">
@@ -97,14 +103,15 @@
             <div>
               <input
                 class="w-full pl-3 py-3 border border-1 2px solid rounded-lg"
-                type="text"
+                type="number"
                 name=""
-                id=""
+                id="noakhali-input"
                 placeholder="Write Donation Amount"
               />
             </div>
             <div>
               <button
+                id="noakhali-btn"
                 class="w-full text-center text-black bg-[#B4F461] py-3 rounded-lg"
               >
                 Donate Now
@@ -124,7 +131,11 @@
         <div class="space-y-10">
           <div>
             <button class="bg-gray-100 rounded-xl text-base space-x-1 p-3">
-              <img class="inline" src="./assets/coin.png" alt="" /> 200 BDT
+              <img class="inline" src="./assets/coin.png" alt="" /><span
+                id="feni-acc"
+                >19100</span
+              >
+              BDT
             </button>
           </div>
           <h1 class="text-xl text-black font-bold">
@@ -144,14 +155,15 @@
             <div>
               <input
                 class="w-full pl-3 py-3 border border-1 2px solid rounded-lg"
-                type="text"
+                type="number"
                 name=""
-                id=""
+                id="feni-input"
                 placeholder="Write Donation Amount"
               />
             </div>
             <div>
               <button
+                id="feni-btn"
                 class="w-full text-center text-black bg-[#B4F461] py-3 rounded-lg"
               >
                 Donate Now
@@ -171,7 +183,8 @@
         <div class="space-y-10">
           <div>
             <button class="bg-gray-100 rounded-xl text-base space-x-1 p-3">
-              <img class="inline" src="./assets/coin.png" alt="" /> 600 BDT
+              <img class="inline" src="./assets/coin.png" alt="" />
+              <span id="quota-acc">36050</span> BDT
             </button>
           </div>
           <h1 class="text-xl text-black font-bold">
@@ -192,14 +205,15 @@
             <div>
               <input
                 class="w-full pl-3 py-3 border border-1 2px solid rounded-lg"
-                type="text"
+                type="number"
                 name=""
-                id=""
+                id="quota-input"
                 placeholder="Write Donation Amount"
               />
             </div>
             <div>
               <button
+                id="quota-btn"
                 class="w-full text-center text-black bg-[#B4F461] py-3 rounded-lg"
               >
                 Donate Now
@@ -211,6 +225,7 @@
       <!-- 3rd Card ends here -->
     </main>
     <footer class="bg-yellow-50 h-20 mt-12"></footer>
+    <script src="./js/commonfunc.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
