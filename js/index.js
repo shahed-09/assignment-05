@@ -37,3 +37,39 @@ document.getElementById("quota-btn").addEventListener("click", function () {
   document.getElementById("quota-input").value = "";
   //   console.log(donation, noakhaliBalance, accBalance);
 });
+
+// history btn class
+
+document.getElementById("history-btn").addEventListener("click", function () {
+  document
+    .getElementById("donation-btn")
+    .classList.remove("text-black", "bg-[#B4F461]");
+  document
+    .getElementById("donation-btn")
+    .classList.add("text-gray-500", "border-2", "rounded-lg");
+  document
+    .getElementById("history-btn")
+    .classList.add("text-black", "bg-[#B4F461]");
+  document
+    .getElementById("history-btn")
+    .classList.remove("text-gray-500", "border-2");
+  document.getElementById("main").classList.add("hidden");
+});
+
+//donation btn class
+
+document.getElementById("donation-btn").addEventListener("click", function () {
+  document
+    .getElementById("history-btn")
+    .classList.remove("text-black", "bg-[#B4F461]");
+  document
+    .getElementById("history-btn")
+    .classList.add("text-gray-500", "border-2", "rounded-lg");
+  document
+    .getElementById("donation-btn")
+    .classList.add("text-black", "bg-[#B4F461]");
+  document
+    .getElementById("donation-btn")
+    .classList.remove("text-gray-500", "border-2");
+  document.getElementById("main").classList.remove("hidden");
+});
