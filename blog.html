@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex justify-center">
+      <header class="w-full fixed top-0 pb-5 backdrop-blur-[50px] z-20">
+        <nav class="flex justify-between pt-7 md:container m-auto px-8">
+          <div>
+            <button class="btn bg-[#B4F461] font-semibold text-xl text-black">
+              Blog
+            </button>
+          </div>
+          <div class="flex items-center space-x-3">
+            <img src="./assets/logo.png" alt="" />
+            <h3 class="font-semibold text-black text-xl hidden md:flex">
+              Donate Bangladesh
+            </h3>
+          </div>
+          <div class="flex items-center space-x-2">
+            <img src="./assets/coin.png" alt="" />
+            <p class="text-gray-600 font-semibold text-xl">5500 BDT</p>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <!-- accordion -->
+    <div class="mt-20 pt-10 md:container px-8">
+      <h1 class="text-black font-bold text-3xl mb-3 pl-3">Important FAQ</h1>
+      <div class="collapse collapse-arrow bg-white">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The DOM is a programming interface for web documents. It represents
+            the structure of a document (like HTML or XML) as a tree of objects,
+            allowing scripts to manipulate the document’s structure, style, and
+            content dynamically.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-white">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How does the DOM represent a document?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The DOM represents a document as a tree structure where each node is
+            an object representing a part of the document. Nodes can be
+            elements, attributes, text, or other types of objects. This
+            hierarchical structure allows for easy traversal and manipulation of
+            the document.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-white">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How can you traverse the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Traversing the DOM involves moving through the nodes of the document
+            tree to access or manipulate elements. You can use various
+            properties and methods like parentNode, childNodes, firstChild,
+            lastChild, nextSibling, and previousSibling to navigate between
+            nodes. Additionally, methods like getElementById,
+            getElementsByClassName, and querySelector help in selecting specific
+            elements.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-white">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What are some common uses of the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Modifying content: Changing the text or HTML of elements. Changing
+            styles: Dynamically updating CSS styles. Handling events: Attaching
+            event listeners to elements to respond to user actions like clicks
+            or key presses
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
