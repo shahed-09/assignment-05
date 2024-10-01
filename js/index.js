@@ -7,7 +7,11 @@ document.getElementById("noakhali-btn").addEventListener("click", function () {
 
   if (donation < 0 || isNaN(donation) || donation > accBalance) {
     document.getElementById("noakhali-input").value = "";
+    document.getElementById("my_modal_5").classList.add("hidden");
+    const modal = document.getElementById("my_modal_5");
+    modal.remove();
     alert("Invalid amount");
+
     return;
   }
 
@@ -48,6 +52,9 @@ document.getElementById("feni-btn").addEventListener("click", function () {
 
   if (donation < 0 || isNaN(donation) || donation > accBalance) {
     document.getElementById("feni-input").value = "";
+    document.getElementById("my_modal_6").classList.add("hidden");
+    const modal = document.getElementById("my_modal_6");
+    modal.remove();
     alert("Invalid amount");
     return;
   }
@@ -81,43 +88,48 @@ document.getElementById("feni-btn").addEventListener("click", function () {
 
 // for quota protest
 
-document.getElementById("quota-btn").addEventListener("click", function () {
-  const donation = inputConverter("quota-input");
-  const quotaBalance = numConverter("quota-acc");
-  const accBalance = numConverter("accBalance");
+document
+  .getElementById("quota-btn")
+  .addEventListener("click", function (event) {
+    const donation = inputConverter("quota-input");
+    const quotaBalance = numConverter("quota-acc");
+    const accBalance = numConverter("accBalance");
 
-  if (donation < 0 || isNaN(donation) || donation > accBalance) {
+    if (donation < 0 || isNaN(donation) || donation > accBalance) {
+      document.getElementById("quota-input").value = "";
+      const modal = document.getElementById("my_modal_7");
+      modal.remove();
+      alert("Invalid amount");
+
+      return;
+    }
+
+    document.getElementById("accBalance").innerText = accBalance - donation;
+    document.getElementById("quota-acc").innerText = quotaBalance + donation;
     document.getElementById("quota-input").value = "";
-    alert("Invalid amount");
-    return;
-  }
 
-  document.getElementById("accBalance").innerText = accBalance - donation;
-  document.getElementById("quota-acc").innerText = quotaBalance + donation;
-  document.getElementById("quota-input").value = "";
+    // history starts
 
-  // history starts
+    const historyContainer = document.getElementById("historySec");
 
-  const historyContainer = document.getElementById("historySec");
+    const quotaHistory = document.createElement("div");
+    quotaHistory.classList.add(
+      "p-3",
+      "border-2",
+      "border-gray-100",
+      "rounded-xl",
+      "space-y-3"
+    );
 
-  const quotaHistory = document.createElement("div");
-  quotaHistory.classList.add(
-    "p-3",
-    "border-2",
-    "border-gray-100",
-    "rounded-xl",
-    "space-y-3"
-  );
-
-  quotaHistory.innerHTML = `
+    quotaHistory.innerHTML = `
     <p class = "text-black font-bold text-xl"> ${donation} Taka is Donated for Quota Protest victims, Bangladesh </P>
     <p class = "text-gray-300 text-base text-sm"> ${new Date().toLocaleDateString()}</P>
   
     `;
 
-  historyContainer.insertBefore(quotaHistory, historyContainer.firstChild);
-  // history ends
-});
+    historyContainer.insertBefore(quotaHistory, historyContainer.firstChild);
+    // history ends
+  });
 
 // history btn class
 
